@@ -5,6 +5,7 @@ def display_menu():
     print("list - List all movies")
     print("add -  Add a movie")
     print("del -  Delete a movie")
+    print("find - Find movies by year")
     print("exit - Exit program")
     print()    
 
@@ -23,9 +24,11 @@ def list(movie_list):
 def add(movie_list):
     name = input("Name: ")
     year = input("Year: ")
+    price = input("Price: ")
     movie = []
     movie.append(name)
     movie.append(year)
+    movie.append(price)
     movie_list.append(movie)
     print(movie[0] + " was added.\n")
     
@@ -36,6 +39,17 @@ def delete(movie_list):
     else:
         movie = movie_list.pop(number-1)
         print(movie[0] + " was deleted.\n")
+
+
+def find_by_year(movie_list):
+    year = int(input("Year: "))
+    for movie in movie_list:
+        if movie[1] == year:
+            print(movie[0] + " was released in " + str(year))
+            print()
+
+
+    
         
 def main():
     movie_list = [["Monty Python and the Holy Grail", 1975],
