@@ -14,10 +14,12 @@ def list(movie_list):
         print("There are no movies in the list.\n")
         return
     else:
-        i = 1
+        i = 0
         for movie in movie_list:
             row = movie
-            print(str(i) + ". " + row[0] + " (" + str(row[1]) + ")")
+            print(str(i+1) + ". " + row[0] 
+                + " (" + str(row[1]) + ")"
+                + " @ " + str(row[2]))
             i += 1
         print()
 
@@ -54,7 +56,7 @@ def find_by_year(movie_list):
 def main():
     movie_list = [["Monty Python and the Holy Grail", 1975, 9.95],
                   ["On the Waterfront", 1954, 5.59],
-                  ["Cat on a Hot Tin Roof", 1958 7.95]
+                  ["Cat on a Hot Tin Roof", 1958, 7.95],
                   ["Gone with the Wind", 1939, 14.95]]
     
     display_menu()
@@ -66,6 +68,8 @@ def main():
             add(movie_list)
         elif command == "del":
             delete(movie_list)
+        elif command == "find":
+            find_by_year(movie_list)
         elif command == "exit":
             break
         else:
