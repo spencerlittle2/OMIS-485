@@ -27,6 +27,9 @@ def write_movies(movies):
         with open(FILENAME, "w", newline="") as file:
             writer = csv.writer(file)
             writer.writerows(movies)
+    except OSError as e:
+        print(type(e), e)
+        exit_program
     except Exception as e:
         print(type(e), e)
         exit_program()
