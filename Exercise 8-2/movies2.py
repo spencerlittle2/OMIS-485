@@ -39,7 +39,17 @@ def list_movies(movies):
     
 def add_movie(movies):
     name = input("Name: ")
-    year = input("Year: ")
+    while True:
+        try: 
+            year = int(input("Year: "))
+        except ValueError:
+            print("Not valid number, try again")
+            continue
+        if year <= 0:
+            print("Year must be greater than zero, try again")
+            continue
+        else:
+            break
     movie = []
     movie.append(name)
     movie.append(year)
