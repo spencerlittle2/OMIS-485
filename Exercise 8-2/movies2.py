@@ -31,7 +31,7 @@ def write_movies(movies):
             writer.writerows(movies)
     except OSError as e:
         print(type(e), e)
-        exit_program
+        exit_program()
     except Exception as e:
         print(type(e), e)
         exit_program()
@@ -39,7 +39,7 @@ def write_movies(movies):
 def list_movies(movies):
     for i in range(0, len(movies)):
         movie = movies[i]
-        print(str(i+1) + ". " + movie[0] + " (" + movie[1] + ")")
+        print(str(i+1) + ". " + movie[0] + " (" + str(movie[1]) + ")")
     print()
     
 def add_movie(movies):
