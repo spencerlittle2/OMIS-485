@@ -25,6 +25,7 @@ def read_movies():
 def write_movies(movies):
     try:
         with open(FILENAME, "w", newline="") as file:
+##      raise BlockingIOError("used for example.")
             writer = csv.writer(file)
             writer.writerows(movies)
     except OSError as e:
