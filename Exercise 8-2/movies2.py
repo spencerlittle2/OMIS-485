@@ -1,7 +1,7 @@
 import csv
 import sys
 
-FILENAME = "movies.csv"
+FILENAME = "movies_test.csv"
 
 def exit_program():
     print("Terminating program.")
