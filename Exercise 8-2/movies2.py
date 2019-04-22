@@ -16,8 +16,9 @@ def read_movies():
                 movies.append(row)
         return movies
     except FileNotFoundError as e:
-        print("Could not find " + FILENAME + " file.")
-        exit_program()
+ ##       print("Could not find " + FILENAME + " file.")
+ ##       exit_program()
+        return movies
     except Exception as e:
         print(type(e), e)
         exit_program()
