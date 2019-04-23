@@ -11,6 +11,12 @@
 <script>
 w3.includeHTML();
 </script>
-
+<script>
+        w3.includeHTML(myCallback);
+        
+        function myCallback() {
+          // code that has to wait goes here
+        }
+        </script>
 </body>
 </html>
