@@ -4,13 +4,21 @@
 <script src="w3.js"></script>
 <body>
 
-
 <div w3-include-html="h1.html"></div> 
 <div w3-include-html="content.html"></div> 
 
 <script>
-w3.includeHTML();
+w3.includeHTML(myCallback);
+
+function myCallback() {
+    w3.displayObject
+}
+
+
+
 </script>
+
+
 
 </body>
 </html>
