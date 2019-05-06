@@ -1,0 +1,34 @@
+blockquote{
+	padding: 0;
+	margin: 0;
+}
+
+.rightquote{
+	float: right;
+	border-left: 1px solid orange;
+	font-size: 110%;
+	line-height: 1.5;
+	font-weight: bold;
+	margin-left: 10px;
+	padding-left: 10px;
+	width: 200px;
+}
+
+.rightquote::first-letter{
+	text-transform: uppercase;
+}
+
+.leftquote{
+	float: left;
+	border-right: 1px solid orange;
+	font-size: 110%;
+	line-height: 1.5;
+	font-weight: bold;
+	margin-right: 10px;
+	padding-right: 10px;
+	width: 200px;
+}
+
+.leftquote::first-letter{
+	text-transform: uppercase;
+}
